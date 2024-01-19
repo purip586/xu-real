@@ -10,7 +10,7 @@ const Property = ({property: {coverPhoto, propertyName, location, price, rooms, 
     <Link style={{ textDecoration: 'none' }} href={`/property/${externalID}`} passHref>
         <Flex className="property_tag" flexDir='column' w="400px" p="5" paddingTop="0" justifyContent="center" cursor="pointer">
             <Box>
-                <Image src={coverPhoto ? {coverPhoto} : defaultImage} width={400} height={260} alt="house" />
+                <Image src={coverPhoto ? coverPhoto.url : defaultImage} width={400} height={260} alt="house" />
             </Box>
 
             <Box w="full">
