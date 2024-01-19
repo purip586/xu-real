@@ -5,7 +5,7 @@ const nextConfig = {
       serverComponentsExternalPackages: ["mongoose"],
     },
     images: {
-      domains: ['xu-real.vercel.app'],
+      domains: ['https://xu-real.vercel.app'],
     },
     webpack(config) {
       config.experiments = {
