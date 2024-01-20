@@ -60,7 +60,6 @@ const PropertyRegForm = ({ post, setPost, submitting, handleSubmit }) => {
             onChange={(e) => setPost({ ...post, coverPhoto: e.target.value })}
             type='file'
             placeholder='upload Images'
-            required
             className='form_input'
           />
         </label>
