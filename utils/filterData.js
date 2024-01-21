@@ -1,35 +1,42 @@
 export const filterData = [
   {
     items: [
-      { name: '10,000', value: '10000' },
-      { name: '20,000', value: '20000' },
-      { name: '30,000', value: '30000' },
-      { name: '40,000', value: '40000' },
-      { name: '50,000', value: '50000' },
-      { name: '60,000', value: '60000' },
-      { name: '85,000', value: '85000' },
+      { name: 'No min limit', value: '0' },
+      { name: '10,000,000', value: '10000000' },
+      { name: '20,000,000', value: '20000000' },
+      { name: '30,000,000', value: '30000000' },
+      { name: '40,000,000', value: '40000000' },
+      { name: '50,000,000', value: '50000000' },
+      { name: '60,000,000', value: '60000000' },
+      { name: '70,000,000', value: '70000000' },
+      { name: '80,000,000', value: '80000000' },
+      { name: '90,000,000', value: '90000000' },
+      { name: '100,000,000', value: '100000000' },
+      { name: '200,000,000', value: '200000000' },
+      { name: '300,000,000', value: '300000000' },
+      { name: '400,000,000', value: '400000000' },
+      { name: '500,000,000', value: '500000000' },
     ],
     placeholder: 'Min Price(JPY)',
     queryName: 'minPrice',
   },
   {
     items: [
-      { name: '50,000', value: '50000' },
-      { name: '60,000', value: '60000' },
-      { name: '85,000', value: '85000' },
-      { name: '110,000', value: '110000' },
-      { name: '135,000', value: '135000' },
-      { name: '160,000', value: '160000' },
-      { name: '185,000', value: '185000' },
-      { name: '200,000', value: '200000' },
-      { name: '300,000', value: '300000' },
-      { name: '400,000', value: '400000' },
-      { name: '500,000', value: '500000' },
-      { name: '600,000', value: '600000' },
-      { name: '700,000', value: '700000' },
-      { name: '800,000', value: '800000' },
-      { name: '900,000', value: '900000' },
-      { name: '1000,000', value: '1000000' },
+      { name: '20,000,000', value: '20000000' },
+      { name: '30,000,000', value: '30000000' },
+      { name: '40,000,000', value: '40000000' },
+      { name: '50,000,000', value: '50000000' },
+      { name: '60,000,000', value: '60000000' },
+      { name: '70,000,000', value: '70000000' },
+      { name: '80,000,000', value: '80000000' },
+      { name: '90,000,000', value: '90000000' },
+      { name: '100,000,000', value: '100000000' },
+      { name: '200,000,000', value: '200000000' },
+      { name: '300,000,000', value: '300000000' },
+      { name: '400,000,000', value: '400000000' },
+      { name: '500,000,000', value: '500000000' },
+      { name: 'No max limit', value: '' },
+ 
     ],
     placeholder: 'Max Price(JPY)',
     queryName: 'maxPrice',
@@ -45,15 +52,16 @@ export const filterData = [
   },
   {
     items: [
-      { name: '1000', value: '1000' },
-      { name: '2000', value: '2000' },
-      { name: '3000', value: '3000' },
-      { name: '4000', value: '4000' },
-      { name: '5000', value: '5000' },
-      { name: '10000', value: '10000' },
-      { name: '20000', value: '20000' },
+      { name: '30', value: '30' },
+      { name: '40', value: '40' },
+      { name: '50', value: '50' },
+      { name: '60', value: '60' },
+      { name: '70', value: '70' },
+      { name: '80', value: '80' },
+      { name: '90', value: '90' },
+      { name: '100+', value: '' },
     ],
-    placeholder: 'Min Area(sqft)',
+    placeholder: 'Min Area(sqm)',
     queryName: 'areaMin',
   },
   {
@@ -63,31 +71,13 @@ export const filterData = [
       { name: '3', value: '3' },
       { name: '4', value: '4' },
       { name: '5', value: '5' },
-      { name: '6', value: '6' },
-      { name: '7', value: '7' },
-      { name: '8', value: '8' },
-      { name: '9', value: '9' },
-      { name: '10', value: '10' },
+      { name: '6+', value: '' },
+  
     ],
     placeholder: 'Rooms',
     queryName: 'roomsMin',
   },
-  {
-    items: [
-      { name: '1', value: '1' },
-      { name: '2', value: '2' },
-      { name: '3', value: '3' },
-      { name: '4', value: '4' },
-      { name: '5', value: '5' },
-      { name: '6', value: '6' },
-      { name: '7', value: '7' },
-      { name: '8', value: '8' },
-      { name: '9', value: '9' },
-      { name: '10', value: '10' },
-    ],
-    placeholder: 'Baths',
-    queryName: 'bathsMin',
-  },
+ 
   {
     items: [
       { name: 'Furnished', value: 'furnished' },
@@ -98,39 +88,27 @@ export const filterData = [
   },
   {
     items: [
-      { name: 'Detached Home', value: '4' },
-      { name: 'Investment Property, Apartment, Mansion', value: '16' },
+      { name: 'Detached Home', value: '1' },
+      { name: 'Investment Property, Apartment, Mansion', value: '2' },
       { name: 'Mansion Unit, Condo', value: '3' },
-      { name: 'Penthouses', value: '18' }
+      { name: 'Penthouses', value: '4' }
     ],
     placeholder: 'Property Type',
-    queryName: 'categoryExternalID',
+    queryName: 'categoryID',
   },
 ];
 
 export const getFilterValues = (filterValues) => {
   const {
-    purpose,
-    rentFrequency,
-    categoryExternalID,
+    categoryID,
     minPrice,
     maxPrice,
-    areaMax,
     roomsMin,
-    bathsMin,
     sort,
     locationExternalIDs,
   } = filterValues;
 
   const values = [
-    {
-      name: 'purpose',
-      value: purpose,
-    },
-    {
-      name: 'rentFrequency',
-      value: rentFrequency,
-    },
     {
       name: 'minPrice',
       value: minPrice,
@@ -140,16 +118,8 @@ export const getFilterValues = (filterValues) => {
       value: maxPrice,
     },
     {
-      name: 'areaMax',
-      value: areaMax,
-    },
-    {
       name: 'roomsMin',
       value: roomsMin,
-    },
-    {
-      name: 'bathsMin',
-      value: bathsMin,
     },
     {
       name: 'sort',
@@ -160,8 +130,8 @@ export const getFilterValues = (filterValues) => {
       value: locationExternalIDs,
     },
     {
-      name: 'categoryExternalID',
-      value: categoryExternalID,
+      name: 'categoryID',
+      value: categoryID,
     },
   ];
 

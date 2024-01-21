@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "@/styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 
@@ -16,6 +17,7 @@ const RootLayout = ({ children }) => (
         <main className='app'>
           <Navbar />
           {children}
+          <Footer />
         </main>
       </ChakraProvider>
     </body>

@@ -14,10 +14,11 @@ const Navbar = () => (
             <p className='logo_text'>Cross U Co., Ltd.</p>
         </Link>
 
-        <div className="flex gap-3">
+        <div className="flex gap-5">
             <Link href='/register-property'>Register Property</Link>
             <Link href='/creditworthness'>Check Creditworthness</Link>
             <Link href='/about'>About XU</Link>
+            <Link href='/contact'>Connect with an agent</Link>
         </div>
     </nav>
 );
