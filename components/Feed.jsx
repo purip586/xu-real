@@ -3,18 +3,19 @@ import Image from 'next/image'
 import { Flex, Box, Text, Icon } from '@chakra-ui/react';
 import SearchFilters from './SearchFilters';
 
-import Property from '@/components/Property';
+import PropertyCard from '@/components/PropertyCard';
 import noresult from '@/public/assets/noresult.svg';
 
 import { useState, useEffect } from 'react';
 
-const PropertyList = ({ data }) => {
+const PropertyList = ({ data, handleTagClick }) => {
   return (
     <div className='mt-16 property_layout'>
       {data.map((post) => (
-        <Property
+        <PropertyCard
           key={post._id}
           property={post}
+          handleTagClick={handleTagClick}
         />
       ))}
     </div>
@@ -53,7 +54,8 @@ const Feed = () => {
         </Flex>
  
         <PropertyList 
-          data={allPosts} 
+          data={allPosts}
+          handleTagClick={() => {}} 
         />
     </Box>
   )

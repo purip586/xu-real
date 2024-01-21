@@ -16,6 +16,7 @@ const Navbar = () => (
 
         <div className="flex gap-3">
             <Link href='/register-property'>Register Property</Link>
+            <Link href='/creditworthness'>Check Creditworthness</Link>
             <Link href='/about'>About XU</Link>
         </div>
     </nav>
