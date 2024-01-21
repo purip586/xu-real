@@ -17,7 +17,7 @@ const PropertyDetails = ({ propertyDetails: { price, rooms, title, baths, area, 
         <Spacer />
       </Flex>
       <Flex alignItems='center' p='1' justifyContent='space-between' w='250px' color='blue.400'>
-        {rooms}<FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
+        {rooms}<FaBed /> | {baths} <FaBath /> | {millify(area)} sqft
       </Flex>
     </Box>
     <Box marginTop='2'>
