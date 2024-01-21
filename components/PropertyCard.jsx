@@ -7,10 +7,9 @@ import { useParams } from "next/navigation";
 
 import defaultImage from '@/public/assets/house.jpg';
 
-const params = useParams()
-const id = params._id;
 
-const PropertyCard = ({property: {coverPhoto, propertyName, price, location, rooms, desc, baths, area, id}}) => (
+
+const PropertyCard = ({property: {coverPhoto, propertyName, price, location, rooms, desc, baths, area}}) => (
    
     <Link style={{ textDecoration: 'none' }} href={`/property/:_id`} passHref>
         <Flex className="property_tag" flexDir='column' w="400px" p="5" paddingTop="0" justifyContent="center" cursor="pointer">
@@ -19,7 +18,6 @@ const PropertyCard = ({property: {coverPhoto, propertyName, price, location, roo
             </Box>
 
             <Box w="full">
-                <p>{id}</p>
                 <Flex paddingTop="2" alignItems="center" justifyContent="space-between">
                     <Text fontWeight="bold" fontSize="lg">{propertyName}</Text>
                     <Text fontSize="sm">JPY {price}</Text>
