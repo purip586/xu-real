@@ -30,7 +30,7 @@ const Navbar = () => {
             </div>
 
                 {/* mobile navigation */}
-                <div className="sm:hidden flex relative gap-2">
+                <div className="sm:hidden flex relative">
                     <HiOutlineMenuAlt4 onClick={() => setToggleDropdown(!toggleDropdown)}/>
                     {toggleDropdown && (
                         <div className="dropdown">
