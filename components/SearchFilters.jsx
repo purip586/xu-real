@@ -66,7 +66,7 @@ export default function SearchFilters() {
               <Input
                 placeholder='Search by location, City, Station'
                 value={searchTerm}
-                w='450px'
+                w='350px'
                 focusBorderColor='blue.300'
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
