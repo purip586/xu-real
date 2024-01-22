@@ -8,9 +8,9 @@ const nextConfig = {
       remotePatterns: [
         {
           protocol: 'https',
-          hostname: '',
+          hostname: 'cloud.mongodb.com',
           port: '',
-          pathname: '',
+          pathname: '/account123/**',
         },
       ],
     },
