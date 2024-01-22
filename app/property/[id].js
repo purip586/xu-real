@@ -29,10 +29,7 @@ const PropertyDetails = ({ propertyDetails: { price, rooms, title, baths, area, 
         <Text>Type</Text>
         <Text fontWeight='bold'>{type}</Text>
       </Flex>
-      <Flex justifyContent='space-between' w='400px' borderBottom='1px' borderColor='gray.100' p='3'>
-        <Text>Purpose</Text>
-        <Text fontWeight='bold'>{purpose}</Text>
-      </Flex>
+  
       {furnishingStatus && (
         <Flex justifyContent='space-between' w='400px' borderBottom='1px' borderColor='gray.100' p='3' >
           <Text>Furnishing Status</Text>
