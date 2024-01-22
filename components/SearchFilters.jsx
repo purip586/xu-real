@@ -64,7 +64,7 @@ export default function SearchFilters() {
         <Flex flexDir='column'>
           <Flex flexDir='column' pos='relative' paddingTop='2'>
               <Input
-                placeholder='Search by location'
+                placeholder='Search by location, City, Station'
                 value={searchTerm}
                 w='400px'
                 focusBorderColor='blue.300'

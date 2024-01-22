@@ -74,17 +74,17 @@ export const filterData = [
       { name: '6+', value: '' },
   
     ],
-    placeholder: 'Rooms',
+    placeholder: 'Bedrooms',
     queryName: 'roomsMin',
   },
  
   {
     items: [
-      { name: 'Furnished', value: 'furnished' },
-      { name: 'Unfurnished', value: 'unfurnished' },
+      { name: 'Yes', value: 'yes' },
+      { name: 'No', value: 'no' },
     ],
-    placeholder: 'Furnish Type',
-    queryName: 'furnishingStatus',
+    placeholder: 'Parking',
+    queryName: 'parkingStatus',
   },
   {
     items: [

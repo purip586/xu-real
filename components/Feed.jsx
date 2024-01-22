@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react';
 
 const PropertyList = ({ data, handleTagClick }) => {
   return (
-    <div className='mt-16 property_layout'>
+    <div className='mt-11 property_layout'>
       {data.map((post) => (
         <PropertyCard
           key={post._id}

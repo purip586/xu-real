@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import {Box, Flex, Text} from '@chakra-ui/react';
-import {FaBed, FaBath} from 'react-icons/fa';
+import {FaBed, FaBath, FaMapMarkerAlt, FaCar } from 'react-icons/fa';
 import millify from "millify";
 import { useParams } from "next/navigation";
 
@@ -9,7 +9,7 @@ import defaultImage from '@/public/assets/house.jpg';
 
 
 
-const PropertyCard = ({property: {coverPhoto, propertyName, price, location, rooms, desc, baths, area}}) => (
+const PropertyCard = ({property: {coverPhoto, propertyName, price, location, rooms, baths, parking, area, desc}}) => (
    
     <Link style={{ textDecoration: 'none' }} href={`/property/:_id`} passHref>
         <Flex className="property_tag" flexDir='column' w="400px" p="5" paddingTop="0" justifyContent="center" cursor="pointer">
@@ -23,14 +23,14 @@ const PropertyCard = ({property: {coverPhoto, propertyName, price, location, roo
                     <Text fontSize="sm">JPY {price}</Text>
                 </Flex>
                 <Flex alignItems="center">
-                    <Text fontSize="sm">{location}</Text>
+                    <FaMapMarkerAlt /><Text fontSize="sm">{location}</Text>
                 </Flex>
                 <Flex alignItems="center" p="1" justifyContent="space-between" w="250px" color="blue.400">
-                    {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqm
+                    {rooms} <FaBed /> | {baths} <FaBath /> | {parking} <FaCar/> | {millify(area)} sqm
                 </Flex>
-                {/* <Text fontSize="lg">
-                    {title?.length > 30 ? `${title.substring(0, 30)}...` : title}
-                </Text> */}
+                <Text fontSize="lg">
+                    {desc?.length > 30 ? `${desc.substring(0, 30)}...` : desc}
+                </Text>
             </Box>
         </Flex>
     </Link>
