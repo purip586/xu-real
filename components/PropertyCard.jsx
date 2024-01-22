@@ -20,7 +20,7 @@ const PropertyCard = ({property: {_id, coverPhoto, propertyName, price, location
             <Box w="full">
                 <Flex paddingTop="2" alignItems="center" justifyContent="space-between">
                     <Text fontWeight="bold" fontSize="lg">{propertyName}</Text>
-                    <Text fontSize="sm">JPY {price.toLocaleString('en-US', {style:'currency'})}</Text>
+                    <Text fontSize="sm">JPY {price.toLocaleString('en-US')}</Text>
                 </Flex>
                 <Flex alignItems="center">
                     <FaMapMarkerAlt /><Text fontSize="sm">{location}</Text>
