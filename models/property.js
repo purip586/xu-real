@@ -7,7 +7,7 @@ const PropertySchema = new Schema({
     required: [true, 'Property Name is required.'],
   },
   price: {
-    type: String,
+    type: Number,
     required: [true, 'Price is required.'],
   },
   location: {

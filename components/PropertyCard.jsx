@@ -9,18 +9,18 @@ import defaultImage from '@/public/assets/house.jpg';
 
 
 
-const PropertyCard = ({property: {coverPhoto, propertyName, price, location, rooms, baths, parking, area, desc}}) => (
+const PropertyCard = ({property: {_id, coverPhoto, propertyName, price, location, rooms, baths, parking, area, desc}}) => (
    
-    <Link style={{ textDecoration: 'none' }} href={`/property/:_id`} passHref>
+    <Link style={{ textDecoration: 'none' }} href={`/property/${_id}`} passHref>
         <Flex className="property_tag" flexDir='column' w="400px" p="5" paddingTop="0" justifyContent="center" cursor="pointer">
             <Box>
-                <Image src={coverPhoto ? {coverPhoto} : defaultImage} width={400} height={260} alt="house" />
+                <Image src={ defaultImage} width={400} height={260} alt="house" />
             </Box>
 
             <Box w="full">
                 <Flex paddingTop="2" alignItems="center" justifyContent="space-between">
                     <Text fontWeight="bold" fontSize="lg">{propertyName}</Text>
-                    <Text fontSize="sm">JPY {price}</Text>
+                    <Text fontSize="sm">JPY {price.toLocaleString('en-US', {style:'currency', currency:'JPY'})}</Text>
                 </Flex>
                 <Flex alignItems="center">
                     <FaMapMarkerAlt /><Text fontSize="sm">{location}</Text>

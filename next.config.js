@@ -5,7 +5,14 @@ const nextConfig = {
       serverComponentsExternalPackages: ["mongoose"],
     },
     images: {
-      domains: [],
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: '',
+          port: '',
+          pathname: '',
+        },
+      ],
     },
     webpack(config) {
       config.experiments = {
