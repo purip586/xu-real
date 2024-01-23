@@ -74,7 +74,7 @@ export const filterData = [
       { name: '6+', value: '' },
   
     ],
-    placeholder: 'Bedrooms',
+    placeholder: 'Min Bedrooms',
     queryName: 'roomsMin',
   },
  
@@ -90,7 +90,7 @@ export const filterData = [
     items: [
       { name: 'Detached Home', value: '1' },
       { name: 'Investment Property, Apartment, Mansion', value: '2' },
-      { name: 'Mansion Unit, Condo', value: '3' },
+      { name: 'Mansion Unit, Condominium', value: '3' },
       { name: 'Penthouses', value: '4' }
     ],
     placeholder: 'Property Type',

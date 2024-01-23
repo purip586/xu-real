@@ -6,22 +6,22 @@ import millify from 'millify';
 import ImageScrollbar from '@/components/ImageScrollbar';
 
 
-const PropertyDetails = ({ propertyDetails: { price, rooms, title, baths, area, description, type, purpose, furnishingStatus, amenities, photos } }) => (
+const PropertyDetails = ({ propertyDetails: { price, rooms, propertyName, baths, area, description, type, furnishingStatus, amenities, photos } }) => (
   <Box maxWidth='1000px' margin='auto' p='4'>
     {photos && <ImageScrollbar data={photos} />}
     <Box w='full' p='6'>
       <Flex paddingTop='2' alignItems='center'>
         <Text fontWeight='bold' fontSize='lg'>
-          JPY {price}
+          JPY {price.toLocaleString('en-US')}
         </Text>
         <Spacer />
       </Flex>
       <Flex alignItems='center' p='1' justifyContent='space-between' w='250px' color='blue.400'>
-        {rooms}<FaBed /> | {baths} <FaBath /> | {millify(area)} sqft
+        {rooms} <FaBed /> | {baths} <FaBath /> | {parking} <FaCar/> | {millify(area)} sqm      
       </Flex>
     </Box>
     <Box marginTop='2'>
-      <Text fontSize='lg' marginBottom='2' fontWeight='bold'>{title}</Text>
+      <Text fontSize='lg' marginBottom='2' fontWeight='bold'>{propertyName}</Text>
       <Text lineHeight='2' color='gray.600'>{description}</Text>
     </Box>
     <Flex flexWrap='wrap' textTransform='uppercase' justifyContent='space-between'>
@@ -55,7 +55,7 @@ const PropertyDetails = ({ propertyDetails: { price, rooms, title, baths, area, 
 export default PropertyDetails;
 
 export async function getServerSideProps({ params: { id } }) {
-  const data = await fetchApi(`${baseUrl}/properties/detail?externalID=${id}`);
+  const data = await fetchApi('');
   
   return {
     props: {

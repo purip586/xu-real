@@ -8,13 +8,12 @@ import { useParams } from "next/navigation";
 import defaultImage from '@/public/assets/house.jpg';
 
 
-
 const PropertyCard = ({property: {_id, coverPhoto, propertyName, price, location, rooms, baths, parking, area, desc}}) => (
    
     <Link style={{ textDecoration: 'none' }} href={`/property/${_id}`} passHref>
-        <Flex className="property_tag" flexDir='column' w="400px" p="5" paddingTop="0" justifyContent="center" cursor="pointer">
+        <Flex className="property_tag" flexDir='column' w="360px" p="5" paddingTop="0" justifyContent="center" cursor="pointer">
             <Box>
-                <Image src={ defaultImage} width={400} height={260} alt="house" />
+                <Image src={ defaultImage} width={360} height={260} alt="house" />
             </Box>
 
             <Box w="full">
