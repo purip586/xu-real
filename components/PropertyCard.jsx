@@ -2,16 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import {Box, Flex, Text} from '@chakra-ui/react';
 import {FaBed, FaBath, FaMapMarkerAlt, FaCar } from 'react-icons/fa';
-import millify from "millify";
-import { useParams } from "next/navigation";
 
 import defaultImage from '@/public/assets/house.jpg';
 
 
-const PropertyCard = ({property: {_id, coverPhoto, propertyName, price, location, rooms, baths, parking, area, desc}}) => (
+const PropertyCard = ({property: {id, coverPhoto, propertyName, price, location, rooms, baths, parking, size, amenities}}) => (
    
-    <Link style={{ textDecoration: 'none' }} href={`/property/${_id}`} passHref>
-        <Flex className="property_tag" flexDir='column' w="360px" p="5" paddingTop="0" justifyContent="center" cursor="pointer">
+    <Link style={{ textDecoration: 'none' }} href={`/property/${id}`} passHref>
+        <Flex className="property_tag" flexDir='column' w="360px" p="5" mb="4" paddingTop="0" justifyContent="center" cursor="pointer">
             <Box>
                 <Image src={ defaultImage} width={360} height={260} alt="house" />
             </Box>
@@ -21,14 +19,14 @@ const PropertyCard = ({property: {_id, coverPhoto, propertyName, price, location
                     <Text fontWeight="bold" fontSize="lg">{propertyName}</Text>
                     <Text fontSize="sm">JPY {price.toLocaleString('en-US')}</Text>
                 </Flex>
-                <Flex alignItems="center">
+                <Flex alignItems="center" color="blue.500" gap="1">
                     <FaMapMarkerAlt /><Text fontSize="sm">{location}</Text>
                 </Flex>
-                <Flex alignItems="center" p="1" justifyContent="space-between" w="250px" color="blue.400">
-                    {rooms} <FaBed /> | {baths} <FaBath /> | {parking} <FaCar/> | {millify(area)} sqm
+                <Flex alignItems="center" p="1" justifyContent="space-between" w="250px" color="blue.500">
+                    {rooms} <FaBed /> | {baths} <FaBath /> | {parking} <FaCar/> | {size} sqm
                 </Flex>
-                <Text fontSize="lg">
-                    {desc?.length > 30 ? `${desc.substring(0, 30)}...` : desc}
+                <Text fontSize="sm">
+                    {amenities?.length > 50 ? `${amenities.substring(0, 50)}...` : amenities}
                 </Text>
             </Box>
         </Flex>
@@ -36,3 +34,5 @@ const PropertyCard = ({property: {_id, coverPhoto, propertyName, price, location
 );
 
 export default PropertyCard;
+
+

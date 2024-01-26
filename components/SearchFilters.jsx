@@ -47,7 +47,7 @@ export default function SearchFilters() {
     }, [searchTerm]);
   
     return (
-      <Flex bg='gray.100' p='4' justifyContent='center' flexWrap='wrap'>
+      <Flex bg='gray.100' mt="10" p='4' justifyContent='center' flexWrap='wrap'>
         <Flex justifyContent='center' flexWrap='wrap'>
           {filters?.map((filter) => (
             <Box key={filter.queryName}>
