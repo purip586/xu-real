@@ -13,7 +13,7 @@ export async function getServerSideProps({ params }) {
   const { id } = params;
 
   // Fetch data based on the id from MongoDB
-  const response = await fetchApi(`/api/property/${id}`);
+  const response = await fetch(`/api/property/${id}`);
   const propertyDetails = await response.json();
 
   return {
