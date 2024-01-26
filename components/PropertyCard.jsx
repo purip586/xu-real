@@ -6,9 +6,9 @@ import {FaBed, FaBath, FaMapMarkerAlt, FaCar } from 'react-icons/fa';
 import defaultImage from '@/public/assets/house.jpg';
 
 
-const PropertyCard = ({property: {id, coverPhoto, propertyName, price, location, rooms, baths, parking, size, amenities}}) => (
+const PropertyCard = ({property: {_id, coverPhoto, propertyName, price, location, rooms, baths, parking, size, amenities}}) => (
    
-    <Link style={{ textDecoration: 'none' }} href={`/property/${id}`} passHref>
+    <Link style={{ textDecoration: 'none' }} href={`/property/${_id}`} passHref>
         <Flex className="property_tag" flexDir='column' w="360px" p="5" mb="4" paddingTop="0" justifyContent="center" cursor="pointer">
             <Box>
                 <Image src={ defaultImage} width={360} height={260} alt="house" />
