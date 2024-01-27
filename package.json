@@ -21,6 +21,7 @@
     "next-auth": "^4.24.5",
     "react": "^18",
     "react-dom": "^18",
+    "react-horizontal-scrolling-menu": "^4.1.2",
     "react-icons": "^5.0.1",
     "use-router": "^0.4.2"
   },
